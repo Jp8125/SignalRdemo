@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="card border-primary" *ngFor="let item of Messages">
+      <div class="card-body">
+        <p class="card-title">{{item.user}}</p>
+        <p class="card-text">{{item.message}}</p>
+      </div>
+    </div>
+</div>
+<div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <input type="text"
+        class="form-control" name="message" id="message" aria-describedby="helpId" [(ngModel)]="message">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <div class="mb-3">
+      <label for="user" class="form-label">User</label>
+      <input type="text"
+        class="form-control" name="user" id="user" aria-describedby="helpId" [(ngModel)]="user">
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+    <button type="button" class="btn btn-outline-primary" (click)="Send()">send</button>
+</div>
