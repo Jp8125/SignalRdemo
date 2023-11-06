@@ -11,7 +11,7 @@ public messageReceived: Subject<{ user: string, message: string }> = new Subject
 
 constructor() { 
   this.hubConnection = new signalR.HubConnectionBuilder()
-.withUrl('https://localhost:7021/ep1') // Replace with your backend URL
+.withUrl('https://localhost:7021/ep1') 
 .build();
 this.startConnection();
 }
